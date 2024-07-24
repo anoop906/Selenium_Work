@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Dropdown {
+public class MultioptionDropdown {
 
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
@@ -22,9 +22,9 @@ public class Dropdown {
 		select.selectByIndex(2);
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000));
 		select.selectByValue("java");
-		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000));
+		
 		select.selectByVisibleText("Python");
-		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000));
+		
 		driver.close();
 
 	}
